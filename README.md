@@ -78,6 +78,30 @@ Then select the targets.
 <p align="center">
 <img src="https://github.com/jijinmichael/NLB/assets/134680540/4caf5785-ec85-4162-b4f2-a134e43c1545"></p>
 
+After creating the TG, create NLB.
+
+Go to **Load Balancing** >> **Load Balancer** >> Select **NLB**, Create.
+
+Load balancer name  : shopping-app
+
+Under mapping section, choose the subnets and use the Elastic IP address which is already allocated in our previous sections.
+
+![image](https://github.com/jijinmichael/NLB/assets/134680540/ac03583e-55da-4738-b0af-1ce47b2724a2)
+
+Then add listener TLS:443 and TCP:80 and assign the created TG to it.
+
+![image](https://github.com/jijinmichael/NLB/assets/134680540/892d4d5d-7579-4ed0-b8c1-d6055f5541d9)
+
+Then load the cer from ACM.
+
+![image](https://github.com/jijinmichael/NLB/assets/134680540/4ff1984d-3109-4ba4-be47-98c90b8b998f)
+
+After this, we need to map the root domain name to the allocated elastic IP's from the Route53. Go to **Route53** >> **DNS management** >> **Hosted zone** >> Select the domain >> Create a record.
+
+Then add the allocated elastic IP's as shown below figure then click on create records.
+
+![image](https://github.com/jijinmichael/NLB/assets/134680540/7561499a-6be1-43fe-9643-5eea80ab81cc)
+
 
 
 
