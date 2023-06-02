@@ -70,7 +70,10 @@ Protocol                    : TCP
 
 Port                        : 80
 
-![image](https://github.com/jijinmichael/NLB/assets/134680540/677151aa-142f-4eaf-90a4-41ae1d5e9fab)
+<p align="center">
+<img src="https://github.com/jijinmichael/NLB/assets/134680540/677151aa-142f-4eaf-90a4-41ae1d5e9fab"></p>
+
+
 
 
 
