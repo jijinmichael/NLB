@@ -25,3 +25,52 @@ Let's see some disadvantages of Network Load Balancer when compared to rest of t
 
 - **Limited Cross-Region Load Balancing:** NLB supports cross-Availability Zone (AZ) load balancing within a single AWS region. However, it does not natively support load balancing across multiple regions.
 
+Let design a small NLB for demonstration.
+---
+
+For this create two instances with the following user data for testing purpose. I'm creating instances in two subnets named ap-south-1a and ap-south-1b.
+```
+#!/bin/bash
+
+
+echo "ClientAliveInterval 60" >> /etc/ssh/sshd_config
+echo "LANG=en_US.utf-8" >> /etc/environment
+echo "LC_ALL=en_US.utf-8" >> /etc/environment
+systemctl restart sshd.service
+
+yum install httpd php -y
+
+cat <<EOF > /var/www/html/index.php
+<?php
+\$output = shell_exec('echo $HOSTNAME');
+echo "<h1><center><pre>\$output</pre></center></h1>";
+echo "<h1><center>shopping-app-version-1</center></h1>"
+?>
+EOF
+
+
+systemctl restart php-fpm.service httpd.service
+systemctl enable php-fpm.service httpd.service
+```
+Once the instances is created, go to the **Network & Security** >> **Elastic IPs** >> **Allocate Elastic IP address**.
+
+Please note: Allocate 2 IP's and give them a tag for the IP's.
+
+![image](https://github.com/jijinmichael/NLB/assets/134680540/6d040f4d-9cbe-42c3-aaf5-46d84d8c7945)
+
+![image](https://github.com/jijinmichael/NLB/assets/134680540/dc710303-21a7-402c-af37-9f3aa324c126)
+
+Then create a target group. Go to **Load Balancing** >> **Target Groups** >> **Create target group**.
+
+Please choose a target type : Instances 
+Target group name           : shopping-nlb-tg
+Protocol                    : TCP 
+
+**Please keep in mind that use TCP as the protocol while using NLB as your load balancer**.
+
+Port                        : 80
+
+![image](https://github.com/jijinmichael/NLB/assets/134680540/677151aa-142f-4eaf-90a4-41ae1d5e9fab)
+
+
+
