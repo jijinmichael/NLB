@@ -1,5 +1,5 @@
 ### Network Load Balancer
-
+---
 In the context of Amazon Web Services (AWS), NLB stands for Network Load Balancer. An NLB is a load balancing option provided by AWS that distributes incoming traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, or Lambda functions, in a network. It operates at the transport layer (Layer 4) of the OSI model and is designed to handle high volumes of traffic with low latency.
 
 <p align="center">
