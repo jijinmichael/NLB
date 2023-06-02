@@ -102,6 +102,6 @@ Then add the allocated elastic IP's as shown below figure then click on create r
 
 ![image](https://github.com/jijinmichael/NLB/assets/134680540/7561499a-6be1-43fe-9643-5eea80ab81cc)
 
-
+Once the above record is added, you can access the root domain which is associated with the NLB. 
 
 
