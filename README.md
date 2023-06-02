@@ -73,6 +73,10 @@ Port                        : 80
 <p align="center">
 <img src="https://github.com/jijinmichael/NLB/assets/134680540/677151aa-142f-4eaf-90a4-41ae1d5e9fab"></p>
 
+Then select the targets.
+
+<p align="center">
+<img src="https://github.com/jijinmichael/NLB/assets/134680540/4caf5785-ec85-4162-b4f2-a134e43c1545"></p>
 
 
 
