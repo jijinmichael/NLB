@@ -6,7 +6,7 @@ In the context of Amazon Web Services (AWS), NLB stands for Network Load Balance
 <img src="https://github.com/jijinmichael/NLB/assets/134680540/4343ffe6-5889-4cdc-bc22-3bde4fefa87d)"></p>
 
 #### Let's see some advantages of NLB
-
+---
 - NLB is designed to handle millions of requests per second with ultra-low latencies. It can efficiently distribute traffic across multiple targets, ensuring optimal performance for your applications.
 
 - **It supports Elastic IP addresses**, allowing you to maintain a consistent IP address for your load balancer. This is useful if you have clients or DNS records that rely on a fixed IP.
@@ -15,8 +15,8 @@ In the context of Amazon Web Services (AWS), NLB stands for Network Load Balance
 
 Overall, NLB provides a highly scalable, reliable, and high-performance load balancing solution for distributing network traffic across multiple targets in AWS.
 
-Let's see some disadvantages of Network Load Balancer when compared to rest of the two.
-
+#### Let's see some disadvantages of Network Load Balancer when compared to rest of the two
+---
 - **Complexity:** NLB configuration can be complex compared to other load balancing options in AWS. It requires manual registration of targets, security groups, and target group associations, which can be challenging for users who are new to NLB or those who prefer simpler configuration options.
 
 - **Limited Protocol Support:** NLB operates at the transport layer (Layer 4) of the OSI model and supports only TCP and UDP protocols. If your application requires advanced protocol handling or application layer (Layer 7) features, such as HTTP header inspection or URL routing, you may need to consider using Application Load Balancer (ALB) instead.
